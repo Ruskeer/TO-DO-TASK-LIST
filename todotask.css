@@ -108,14 +108,21 @@ ul li {
 
 ul li::before {
     content: '';
-    border: 1px solid black;
-    width: 30px;
-    height: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     position: absolute;
     top: 12px;
     left: 8px;
+    background: rgba(255, 255, 255, 0.1);
     background-size: cover;
+    transition: all 0.2s ease;
+}
+
+ul li:hover::before {
+    border-color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 ul li.checked {
