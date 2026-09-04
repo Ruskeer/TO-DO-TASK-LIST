@@ -16,12 +16,14 @@ function addTask() {
         span.innerHTML = '\u00d7'
         li.appendChild(span);
     }
+    taskInput.value = '';
+    saveData();
 }
 
 
 taskList.addEventListener("click", function(e) {
     if (e.target.tagName === "LI") {
-        e.target.classicList.toggle("checked");
+        e.target.classList.toggle("checked");
         saveData();
     }
     else if(e.target.tagName === "SPAN") {
